@@ -1,16 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ judul }} | Kelas Terbuka</title>
+    <title>{{ judul }} | {{subjudul}}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
 </head>
 <body>
-    <h1>{{ judul }}</h1>
-    <h2>Kontributor: {{ kontributor }}</h2>
+<img id="banner" src="{% static banner %}" alt="">
+<nav>
     <ul>
-        <li><a href="/" title="">index</a></li>
-        <li><a href="/blog/" title="">blog</a></li>
-        <li><a href="/blog/cerita" title="">cerita</a></li>
-        <li><a href="/blog/news" title="">news</a></li>
+        <li><a href="/">home</a></li>
+        <li><a href="/blog">blog</a></li>
+        <li><a href="/about">about</a></li>
     </ul>
+</nav>
+    <h1>{{subjudul}}</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nisi laudantium voluptatum molestiae velit sapiente voluptatibus esse, ratione sint et obcaecati quos eligendi voluptate. Ducimus nostrum illo provident placeat maiores?</p>
 </body>
  </html>

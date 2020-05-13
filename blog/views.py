@@ -4,24 +4,13 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        'judul' : 'blog',
-        'kontributor' : 'mario ucup',
-    }
-    return render(request, 'blog/index.html', context)
-
-
-def news(request):
-    context = {
-        'judul' : 'blog',
-        'kontributor' : 'mario otong',
-    }
-    return render(request, 'blog/index.html', context)
-
-
-
-def cerita(request):
-    context = {
-        'judul' : 'blog',
-        'kontributor' : 'sandra bulog',
+        'judul' : 'Kelas Terbuka',
+        'subjudul' : 'Blog',
+        'nav' : [
+            ['/' , "Home" ],
+            ['/blog', "Blog"],
+            ['/about', "About"]
+        ],
+        'banner' : 'blog/img/banner_blog.png'
     }
     return render(request, 'blog/index.html', context)
